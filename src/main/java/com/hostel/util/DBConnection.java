@@ -9,7 +9,7 @@ public class DBConnection {
             "jdbc:mysql://localhost:3306/hostel_complaint_management";
 
     private static final String USER = "root";
-    private static final String PASSWORD = "Yash@2003";
+    private static final String PASSWORD = "YOUR_PASS";
 
     public static Connection getConnection() {
 
