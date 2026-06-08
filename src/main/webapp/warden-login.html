@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Warden Login</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="CSS/warden-login.css">
+<link rel="stylesheet" href="CSS/common.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="left-panel">
+
+        <div class="logo">
+            🏢
+        </div>
+
+        <h1>Warden Portal</h1>
+
+        <p>
+            Manage student complaints, assign workers,
+            track progress, and ensure smooth hostel operations.
+        </p>
+
+        <div class="features">
+
+            <div class="feature-card">
+                View All Complaints
+            </div>
+
+            <div class="feature-card">
+                Assign Workers
+            </div>
+
+            <div class="feature-card">
+                Update Status
+            </div>
+
+            <div class="feature-card">
+                Monitor Resolution
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="right-panel">
+
+        <div class="login-card">
+
+            <h2>Warden Login</h2>
+
+            <p class="subtitle">
+                Sign in to continue
+            </p>
+
+            <form action="WardenLoginServlet" method="post">
+
+                <div class="form-group">
+
+                    <label>Email</label>
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Enter email"
+                        required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Password</label>
+
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Enter password"
+                        required>
+
+                </div>
+
+                <button type="submit">
+                    Login
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+<footer class="footer">
+
+    <p>
+        &copy; 2026 Hostel Complaint Management System
+    </p>
+
+    <p>
+        Developed By Yashavant N B
+    </p>
+
+</footer>
+</body>
+</html>

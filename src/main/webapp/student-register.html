@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register — Hostel Complaint & Maintenance System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="CSS/register.css" />
+  <link rel="stylesheet" href="CSS/common.css">
+</head>
+<body>
+
+  <!-- Background Scene -->
+  <div class="bg-scene">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="bg-grid"></div>
+  </div>
+
+  <!-- Main Layout -->
+  <div class="page-wrapper">
+  <div class="layout-inner">
+
+    <!-- ────────────────────────────────────────
+         LEFT PANEL
+    ─────────────────────────────────────────-->
+    <aside class="left-panel">
+
+      <!-- Brand Badge -->
+      <div class="brand-badge">
+        <span class="brand-dot"></span>
+        <span class="brand-text">HCMS Platform v2.0</span>
+      </div>
+
+      <!-- Icon -->
+      <div class="hero-icon-wrap">
+        <div class="hero-icon">🏛️</div>
+      </div>
+
+      <!-- Heading -->
+      <h1 class="hero-heading">
+        Hostel Complaint<br />Management System
+      </h1>
+
+      <p class="hero-description">
+        A centralized platform for students to raise maintenance requests,
+        track resolution progress, and rate service quality — all in one place.
+      </p>
+
+      <!-- Feature Cards -->
+      <div class="features-grid">
+
+        <div class="feature-card">
+          <div class="feature-icon feature-icon-1">📋</div>
+          <div class="feature-title">Register Complaints</div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon feature-icon-2">🔍</div>
+          <div class="feature-title">Track Complaint Status</div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon feature-icon-3">🔧</div>
+          <div class="feature-title">Worker Assignment</div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon feature-icon-4">⭐</div>
+          <div class="feature-title">Feedback &amp; Rating System</div>
+        </div>
+
+      </div>
+
+      <!-- Stats footer -->
+      <div class="left-footer">
+        <div class="left-footer-stat">
+          <span class="stat-number">2.4k+</span>
+          <span class="stat-label">Students</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="left-footer-stat">
+          <span class="stat-number">98%</span>
+          <span class="stat-label">Resolution Rate</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="left-footer-stat">
+          <span class="stat-number">4.9 ★</span>
+          <span class="stat-label">Avg. Rating</span>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- ────────────────────────────────────────
+         RIGHT PANEL — Registration Form
+    ─────────────────────────────────────────-->
+    <main class="right-panel">
+      <div class="form-container">
+        <div class="form-card">
+
+          <!-- Form Header -->
+          <div class="form-header">
+            <p class="form-eyebrow">Get started free</p>
+            <h2 class="form-title">Create your account</h2>
+            <p class="form-subtitle">Join your hostel community and manage complaints effortlessly.</p>
+          </div>
+
+          <!-- Registration Form -->
+          <form action="StudentRegisterServlet" method="post">
+
+            <!-- Full Name -->
+            <div class="form-group">
+              <label class="form-label" for="full_name">Full Name</label>
+              <div class="input-wrapper">
+                <span class="input-icon">👤</span>
+                <input
+                  class="form-input"
+                  type="text"
+                  id="full_name"
+                  name="full_name"
+                  placeholder="e.g. Arjun Krishnamurthy"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label class="form-label" for="email">Email Address</label>
+              <div class="input-wrapper">
+                <span class="input-icon">✉️</span>
+                <input
+                  class="form-input"
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@university.edu"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- Password + Room Number row -->
+            <div class="form-row">
+
+              <!-- Password -->
+              <div class="form-group">
+                <label class="form-label" for="password">Password</label>
+                <div class="input-wrapper">
+                  <span class="input-icon">🔒</span>
+                  <input
+                    class="form-input"
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Min. 8 characters"
+                    autocomplete="new-password"
+                    required
+                  />
+                  <button
+                    type="button"
+                    class="password-toggle"
+                    aria-label="Toggle password visibility"
+                    onclick="togglePassword()"
+                    id="toggle-btn"
+                  >👁️</button>
+                </div>
+              </div>
+
+              <!-- Room Number -->
+              <div class="form-group">
+                <label class="form-label" for="room_number">Room No.</label>
+                <div class="input-wrapper">
+                  <span class="input-icon">🚪</span>
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="room_number"
+                    name="room_number"
+                    placeholder="e.g. A-204"
+                    required
+                  />
+                </div>
+              </div>
+
+            </div>
+            <!-- end form-row -->
+
+            <!-- Submit -->
+            <button type="submit" class="btn-register">
+              <span class="btn-text">
+                Create Account
+                <span class="btn-arrow">→</span>
+              </span>
+            </button>
+
+          </form>
+          <!-- end form -->
+
+          <!-- Divider -->
+          <div class="form-divider">
+            <div class="divider-line"></div>
+            <span class="divider-text">Already a member?</span>
+            <div class="divider-line"></div>
+          </div>
+
+          <!-- Login Link -->
+          <p class="login-prompt">
+            <a href="student-login.html" class="login-link">Sign in to your account →</a>
+          </p>
+
+          <!-- Terms Note -->
+          <p class="terms-note">
+            By registering you agree to our
+            <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+          </p>
+
+        </div>
+        <!-- end form-card -->
+      </div>
+      <!-- end form-container -->
+    </main>
+
+  </div><!-- end layout-inner -->
+  </div><!-- end page-wrapper -->
+
+  <script>
+    function togglePassword() {
+      const input = document.getElementById('password');
+      const btn   = document.getElementById('toggle-btn');
+      if (input.type === 'password') {
+        input.type = 'text';
+        btn.textContent = '🙈';
+      } else {
+        input.type = 'password';
+        btn.textContent = '👁️';
+      }
+    }
+  </script>
+<footer class="footer">
+
+    <p>
+        &copy; 2026 Hostel Complaint Management System
+    </p>
+
+    <p>
+        Developed By Yashavant N B
+    </p>
+
+</footer>
+</body>
+</html>
